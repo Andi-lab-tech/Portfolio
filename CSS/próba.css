@@ -1,0 +1,117 @@
+body{
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+/*--layout--*/
+	body{
+		display: grid;
+		grid-template-areas: 
+		"fejlec"
+		"kontent"
+		"lablec"
+		;
+		grid-template-rows: max-content 1fr max-content;
+		min-height: 100vh;
+	}
+	header{
+		min-height: 2.5rem;
+		width: 100%;
+		z-index: 8000;
+		position: sticky;
+		top: 0;
+		background-color: rgba(250, 250, 250, .5);
+		grid-area: fejlec;
+	}
+	main{
+
+		background-color: #ffccbf;
+		grid-area: kontent;
+	}
+	footer{
+		background-color: #262626;
+		grid-area: lablec;
+	}
+/*--layout_end--*/	
+
+/*--heading--*/
+	.menü{
+		line-height: 4rem;
+		font-size: .95rem;
+		text-align: center;
+		
+	}
+
+	.gomb{
+		text-decoration: none;
+		color: black;
+		background-color: #ffccbf;
+		font-size: 2rem;
+		display: inline-block;
+		cursor: pointer;
+		max-width: 300px;
+		padding: 5px 20px;
+		margin: 20px;
+		border-radius: 5px;
+	}
+	.gomb:hover{
+		transition: .3s;
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	}
+/*--heading_end--*/
+
+
+.szove{
+	font-size: 3rem;
+	padding: 20px 20px 20px 60px;
+}
+
+/*--kepracs--*/
+	.kepek_flex_racs{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: 1rem;
+
+	}
+
+	.kepek_flex_racs .kep_kartya{
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+		flex-grow: 1;
+		width: 18rem;
+	}
+
+	.kep_kartya .kep{
+		height: 10rem;
+		background-color: rgba(0, 0, 0, .03);
+		text-align: center;
+	}
+
+	.kep_kartya .kep img{
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+
+	.kep_kartya .kep img:hover{
+		transition: .3s;
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	}	
+
+/*--kepracs_end--*/
